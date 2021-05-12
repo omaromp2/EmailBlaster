@@ -10,4 +10,4 @@ Email blaster builded on the laravel framework. Read from an excel, send the ema
 - php artisan key generate
 
 
-### Made with  by Omar
+### Made with ❤️ by Omar
