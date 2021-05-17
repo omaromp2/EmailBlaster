@@ -33,21 +33,17 @@
             }
             #content {
                 display: block;
-                margin-left: 75px;
+                margin-top:0em;
             }
             #mainCont{
-                text-align: justify;
+                text-align: center;
             }
             .usrname {
                 font-family: 'hickory';
-                font-size: 50px;
+                font-size: 70px;
                 padding-top: 200px;
                 text-align: center;
-                /* padding-left: 50px; */
                 margin-top: 50px;
-                /*justify-content: center;*/
-                /*text-align: center;*/
-                /*margin-left: 115px;*/
                 margin-bottom: 0px;
             }
             .usrnameBIG {
@@ -58,7 +54,7 @@
                 /* padding-left: 55px; */
                 /*justify-content: center;*/
                 /*text-align: center;*/
-                /*margin-left: 115px;*/
+                /* margin-left: 115px; */
                 margin-right: 25px;
                 margin-top: 50px;
                 margin-bottom: 0px;
@@ -69,6 +65,16 @@
                 background-color:black;
                 width: 75%;
                 margin-left: 10%;
+                margin-botom:none;
+                margin-top:none;
+            }
+
+            .planTra{
+              margin-top: 200px;
+              color: white;
+              font-weight: bold;
+              text-align: center;
+              font-size: 18px;
             }
 
         </style>
@@ -107,12 +113,18 @@
                 <hr class="line" >
                 <div id="content" >
                     <p>HA PARTICIPADO DEL SERVICIO: {{ $modalidad }} </p>
-                    <h5> {{ $tema }} </h5>
+                    <h5> <b>{{ $tema }}</b> </h5>
                     <p> {{ $fecha_final_servicio }} </p>
                     <p> <b>Horas Contacto: </b>  {{ $horas_contacto }} horas </p>
                 </div>
             </div>
             <div class="column"></div>
+        </div>
+
+        <div class="columns is-mobile">
+            <div class="column is-4 is-offset-8 planTra ">
+              Plan de Trabajo: {{ $plan_de_trabajo }}
+            </div>
         </div>
 
     </body>
