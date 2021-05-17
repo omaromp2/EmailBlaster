@@ -8,7 +8,9 @@
 
         <!-- Fonts -->
         <!-- Styles -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> --}}
+        {{-- <link rel="stylesheet" href="css/bootstrap.min.css"> --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
         <style>
             @font-face {
@@ -31,17 +33,17 @@
             }
             #content {
                 display: block;
-                margin-left: 95px;
+                margin-left: 75px;
             }
             #mainCont{
-                text-align: center;
+                text-align: justify;
             }
             .usrname {
                 font-family: 'hickory';
                 font-size: 50px;
                 padding-top: 200px;
                 text-align: center;
-                padding-left: 50px;
+                /* padding-left: 50px; */
                 margin-top: 50px;
                 /*justify-content: center;*/
                 /*text-align: center;*/
@@ -50,22 +52,30 @@
             }
             .usrnameBIG {
                 font-family: 'hickory';
-                font-size: 40px;
+                font-size: 50px;
                 padding-top: 200px;
                 text-align: center;
-                padding-left: 50px;
+                /* padding-left: 55px; */
                 /*justify-content: center;*/
                 /*text-align: center;*/
                 /*margin-left: 115px;*/
+                margin-right: 25px;
                 margin-top: 50px;
                 margin-bottom: 0px;
+            }
+
+            .line{
+                height: 2px;
+                background-color:black;
+                width: 75%;
+                margin-left: 10%;
             }
 
         </style>
     </head>
     <body id="mainContent">
 
-        <div class="row ">
+        {{-- <div class="row ">
             <div class="col-6" id="mainCont" >
 
                 @if(strlen($nombre_de_participante) >= 15)
@@ -74,31 +84,36 @@
                     <p class="usrname"> {{ $nombre_de_participante }} </p>
                 @endif
 
-                {{-- <p class="usrname" > {{ $nombre_de_participante }} </p> --}}
-
-                {{-- <hr size="250" width="95%" align="center" style="height:12px" > --}}
-                <hr style="height: 12px" >
+                <hr size="300" width="95%" align="center" style="height:16px" color="black" >
                 <div id="content" >
-                    <p>Ha participado de: {{ $modalidad }} </p>
-                    <h4> {{ $tema }} </h4>
+                    <p>HA PARTICIPADO DEL SERVICIO: {{ $modalidad }} </p>
+                    <h5> {{ $tema }} </h5>
                     <p> {{ $fecha_final_servicio }} </p>
-                    <p>Horas Contacto: {{ $horas_contacto }} </p>
+                    <p> <b>Horas Contacto: </b>  {{ $horas_contacto }} horas </p>
                 </div>
             </div>
             <div class="col-6"></div>
-            {{-- <div class="col-4"></div> --}}
-        </div>
-
-        {{-- <div class="container">
-          <div class="row">
-            <div class="col-4">
-             <div class="p-3 border bg-light">Custom column padding</div>
-            </div>
-            <div class="col-4">
-              <div class="p-3 border bg-light">Custom column padding</div>
-            </div>
-          </div>
         </div> --}}
+
+
+        <div class="columns">
+            <div class="column is-three-fifths" id="mainCont" >
+
+                @if(strlen($nombre_de_participante) >= 15)
+                    <p class="usrnameBIG"> {{ $nombre_de_participante }} </p>
+                @else
+                    <p class="usrname"> {{ $nombre_de_participante }} </p>
+                @endif
+                <hr class="line" >
+                <div id="content" >
+                    <p>HA PARTICIPADO DEL SERVICIO: {{ $modalidad }} </p>
+                    <h5> {{ $tema }} </h5>
+                    <p> {{ $fecha_final_servicio }} </p>
+                    <p> <b>Horas Contacto: </b>  {{ $horas_contacto }} horas </p>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
 
     </body>
 </html>
