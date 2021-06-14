@@ -26,7 +26,7 @@
 
             #mainContent {
                 padding-top: 5em;
-                background: url('img/certs1.png') no-repeat center center fixed;
+                background: url('img/certs2.png') no-repeat center center fixed;
                 background-size: cover; /* Resize the background image to cover the entire container */
                 height: 100%;
                 overflow: hidden;
@@ -70,11 +70,11 @@
             }
 
             .planTra{
-              margin-top: 200px;
+              margin-top: 212px;
               color: white;
-              font-weight: bold;
-              text-align: center;
+              text-align: right;
               font-size: 18px;
+              padding-left:8em;
             }
 
         </style>
@@ -122,10 +122,12 @@
         </div>
 
         <div class="columns is-mobile">
-            <div class="column is-4 is-offset-8 planTra ">
-              Plan de Trabajo: {{ $plan_de_trabajo }}
+            <div class="column is-8 is-offset-2 planTra ">
+              <p> {{ $plan_de_trabajo }} </p>
+              <p><b> {{ $nombre_proyecto }} </b></p>
             </div>
         </div>
+
 
     </body>
 </html>

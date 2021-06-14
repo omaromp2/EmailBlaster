@@ -78,6 +78,6 @@
     'normal' => $rootDir . '/lib/fonts/DejaVuSerif',
   ),
   'hickory' => array(
-    'normal' => $fontDir . '/hickory_normal_fd028851c5437e244dbdb591ce8e7e2d',
+    'normal' => $fontDir . '/hickory_normal_fa7fc2ed361490a56697996a852caac1',
   ),
 ) ?>
