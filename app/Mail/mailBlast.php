@@ -35,6 +35,8 @@ class mailBlast extends Mailable
         $attachment = $this->attachment;
         $data = $this->data;
         $att = public_path() . "/storage/certs/" . $attachment;
-        return $this->markdown('emails.mailblast', compact('data'))->attach($att);
+        return $this->markdown('emails.mailblast', compact('data'))
+        ->subject('A+ Education: Certificado de Participación ')
+        ->attach($att);
     }
 }

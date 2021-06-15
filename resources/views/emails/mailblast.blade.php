@@ -1,8 +1,12 @@
 @component('mail::message')
-# Hello {{ $data['nombre_de_participante'] }}
+# Saludos, {{ $data['nombre_de_participante'] }}
 
-Here is your certificate.
+Saludos,  
+<br>
+Gracias por participar del servicio ofrecido por A+ Education & Consulting Solutions. Adjunto su certificado de participación.
+<br>
+De haber algún error en el certificado, favor notificarlo a beatriz.fernandez@quieroaplus.com. Estamos trabajando por orden de fecha. Si usted participó en varios servicios, recibirá un email por servicio (1 certificado por email).
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent
