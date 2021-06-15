@@ -35,13 +35,22 @@ class emailImport implements ToCollection, WithHeadingRow
                 $attachment = $col['nombre_de_participante'] . "-certificado.pdf";
                 $pdf->save($path . "/" . $attachment);
 
-                Mail::to($col['email_de_participante'])
-                     ->send(new mailBlast($attachment, $col));
+            // try {
+                //     //Envio de email...
+                //     Mail::to($col['email_de_participante'])
+                //          ->send(new mailBlast($attachment, $col));
+
+                //     echo $col['email_de_participante'] . " ✅️ \n";
+                // } catch (\Throwable $th) {
+                //     //throw $th;
+                //     echo $col['email_de_participante'] . " 🚫️ \n";
+                // }
+
 
                 // Borramos el archivo
-                Storage::disk('certs')->delete($attachment);
+                // Storage::disk('certs')->delete($attachment);
 
-                echo $col['email_de_participante'] . " ✅️ \n";
+            // echo $col['email_de_participante'] . " ✅️ \n";
             } else {
                 # No se envia ...
                 echo "No Email: " . " 🚫️\n";

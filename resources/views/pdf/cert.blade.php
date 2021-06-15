@@ -70,10 +70,10 @@
             }
 
             .planTra{
-              margin-top: 212px;
+              margin-top: 175px;
               color: white;
               text-align: right;
-              font-size: 18px;
+              font-size: 12px;
               padding-left:8em;
             }
             .tema{
