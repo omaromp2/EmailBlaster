@@ -1,7 +1,6 @@
 @component('mail::message')
 # Saludos, {{ $data['nombre_de_participante'] }}
-
-Saludos,  
+ 
 <br>
 Gracias por participar del servicio ofrecido por A+ Education & Consulting Solutions. Adjunto su certificado de participación.
 <br>
