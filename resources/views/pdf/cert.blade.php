@@ -76,6 +76,10 @@
               font-size: 18px;
               padding-left:8em;
             }
+            .tema{
+                text-align: justify;
+                margin-left: 30px;
+            }
 
         </style>
     </head>
@@ -112,8 +116,19 @@
                 @endif
                 <hr class="line" >
                 <div id="content" >
-                    <p>HA PARTICIPADO DEL SERVICIO: {{ $modalidad }} </p>
-                    <h5> <b>{{ $tema }}</b> </h5>
+                    <p>
+                        HA PARTICIPADO DEL SERVICIO: {{ $modalidad }}
+                    </p>
+                    <br>
+
+                    <div class="columns">
+                        {{-- <div class="column is-2 "></div> --}}
+                        <div class="column is-offset-2 is-two-thirds">
+                            <h5> <b class="tema">{{ $tema }}</b> </h5>
+                        </div>
+
+                    </div>
+
                     <p> {{ $fecha_final_servicio }} </p>
                     <p> <b>Horas Contacto: </b>  {{ $horas_contacto }} horas </p>
                 </div>
