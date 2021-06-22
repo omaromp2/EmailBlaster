@@ -50,7 +50,7 @@ class emailImport implements ToCollection, WithHeadingRow
                 // Borramos el archivo
                 Storage::disk('certs')->delete($attachment);
 
-            // echo $col['email_de_participante'] . " ✅️ \n";
+                echo $col['email_de_participante'] . " ✅️ \n";
             } else {
                 # No se envia ...
                 echo "No Email: " . " 🚫️\n";

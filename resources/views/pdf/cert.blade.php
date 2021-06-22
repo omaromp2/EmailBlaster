@@ -26,7 +26,9 @@
 
             #mainContent {
                 padding-top: 5em;
-                background: url('img/certs2.png') no-repeat center center fixed;
+                /* Version 1 del doc */
+                /* background: url('img/certs2.png') no-repeat center center fixed; */
+                background: url('img/certs3.png') no-repeat center center fixed;
                 background-size: cover; /* Resize the background image to cover the entire container */
                 height: 100%;
                 overflow: hidden;
